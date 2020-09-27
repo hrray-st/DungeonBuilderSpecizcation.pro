@@ -25,15 +25,15 @@ int CDungeon::doLoopEvent()
     string strIn;
     bool bCanQuit = false;
     while(1) {
-        /// start
+        ///< start
         cout << "> ";
         cin >> strIn;
         if(strIn == "dungeon_builder.exe" || strIn == "dungeon_builder") {
-//            cout << "start" << endl;
-//            CDugIns->startGame();
+            ///< cout << "start" << endl;
+            ///< CDugIns->startGame();
             CDugIns->startGame();
             CDugIns->setFloor(1);
-//            _gameRecord.setFloor(1);
+            ///< _gameRecord.setFloor(1);
             cin.ignore();
             cin.get();
             CDugIns->enterGame();
@@ -46,19 +46,19 @@ int CDungeon::doLoopEvent()
             continue;
         }
 
-        /// quit operator
+        ///< quit operator
         if(strIn == "y" && bCanQuit) {
-            /// quit
+            ///< quit
             cout << "Goodbye!" << endl;
             break;
         } else if (strIn == "n" && bCanQuit) {
-            /// reset CanQuit
+            ///< reset CanQuit
             bCanQuit = false;
             continue;
         }
 
         if(_inputParse.inputCmp(strIn.c_str())) {
-//            cout << "" << endl;
+        ///< cout << "" << endl;
             if(_bShowRoom) {
                 int n = atoi(strIn.c_str());
                 if (n > 0 && n <= 9) {
@@ -84,10 +84,10 @@ int CDungeon::doLoopEvent()
             if(nFloor == 5) {
                 CDugIns->setFloor(4);
                 _bShowRoom = true;
-                /// start show room
+                ///< start show room
             }
 
-//            CDugIns->setFloor(nFloor);
+            ///< CDugIns->setFloor(nFloor);
 
         }
 

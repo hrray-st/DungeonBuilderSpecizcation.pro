@@ -23,6 +23,7 @@ SOURCES += \
         inputparse.cpp \
         main.cpp \
         print.cpp \
+        printmodul.cpp \
         random.cpp \
         roomdisplay.cpp
 
@@ -43,6 +44,7 @@ HEADERS += \
     gamerecord.h \
     inputparse.h \
     print.h \
+    printmodul.h \
     random.h \
     roomdisplay.h
 
